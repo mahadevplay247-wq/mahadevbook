@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahadev Book – India’s Trusted Online Betting Platform</title>
+<meta name="description" content="Mahadev Book is India’s trusted platform to get secure online betting IDs for cricket, football & casino. Instant WhatsApp support available.">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ===== GLOBAL ===== */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+body{
+    background:#020617;
+    color:#e5e7eb;
+}
+a{text-decoration:none;color:inherit;transition:0.3s;}
+
+/* ===== HEADER ===== */
+header{
+    background:#020617;
+    border-bottom:2px solid #1e293b;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#38bdf8;
+    text-shadow:0 0 10px #38bdf8,0 0 20px #22c55e;
+}
+.menu a{
+    margin-left:15px;
+    font-size:14px;
+    color:#cbd5f5;
+}
+.menu a:hover{color:#38bdf8;}
+
+/* ===== BUTTON ===== */
+.btn{
+    display:inline-block;
+    background: linear-gradient(90deg, #22c55e, #38bdf8);
+    color:#000;
+    padding:14px 26px;
+    border-radius:12px;
+    font-weight:bold;
+    margin-top:15px;
+    font-size:16px;
+    position:relative;
+    overflow:hidden;
+    transition:0.4s;
+    text-shadow:0 0 5px rgba(0,0,0,0.5);
+}
+.btn i{
+    margin-right:8px;
+}
+.btn:hover{
+    background: linear-gradient(90deg, #16a34a, #0ea5e9);
+    color:#fff;
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+.btn::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background:rgba(255,255,255,0.1);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 0.4s ease;
+}
+.btn:hover::after{
+    transform:scaleX(1);
+}
+
+/* ===== PULSING ANIMATION FOR WHATSAPP FLOAT ===== */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* ===== HERO ===== */
+.hero{
+    padding:60px 20px;
+    text-align:center;
+    background:linear-gradient(180deg,#020617,#0b1220);
+    position:relative;
+    overflow:hidden;
+}
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(270deg,#38bdf8,#22c55e,#facc15,#a855f7);
+    background-size:400% 400%;
+    animation:gradientBG 15s ease infinite;
+    opacity:0.08;
+}
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+.hero img{
+    max-width:100%;
+    border-radius:14px;
+    margin-bottom:25px;
+    transition:transform 0.6s ease,box-shadow 0.6s ease;
+}
+.hero img:hover{
+    transform: scale(1.05);
+    box-shadow:0 15px 40px rgba(56,189,248,0.4);
+}
+.hero h1{
+    font-size:36px;
+    margin-bottom:15px;
+    text-shadow:0 0 10px #38bdf8,0 0 20px #22c55e;
+}
+.hero p{
+    max-width:900px;
+    margin:auto;
+    color:#cbd5f5;
+    font-size:16px;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:#020617;
+    border:1px solid #1e293b;
+    border-radius:10px;
+    padding:25px;
+    margin-bottom:25px;
+    position:relative;
+    transition:0.4s;
+}
+.card h2{
+    color:#38bdf8;
+    margin-top:0;
+    text-shadow:0 0 8px rgba(56,189,248,0.3);
+}
+.card p{
+    color:#cbd5f5;
+}
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg, transparent, rgba(56,189,248,0.12), transparent);
+    opacity:0;
+    transition:0.4s;
+}
+.card:hover::before{
+    opacity:1;
+}
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.7);
+    border-color:#38bdf8;
+}
+
+/* ===== ABOUT IMAGE ===== */
+.about-img{
+    width:100%;
+    border-radius:12px;
+    margin:15px 0 20px;
+    transition:transform 0.5s ease, box-shadow 0.5s ease;
+}
+.about-img:hover{
+    transform: scale(1.05);
+    box-shadow:0 15px 35px rgba(56,189,248,0.4);
+}
+
+/* ===== GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* ===== ICONS ===== */
+.icon{
+    width:55px;
+    margin-bottom:12px;
+}
+
+/* ===== TABLE ===== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:600px;
+}
+th,td{
+    padding:12px;
+    border:1px solid #1e293b;
+}
+th{
+    background:#1e293b;
+    color:#38bdf8;
+}
+tr:nth-child(even){
+    background:#020617;
+}
+
+/* ===== GRID CENTER ===== */
+.center{text-align:center;}
+
+/* ===== SPORTS/CASINO GRID ===== */
+.grid h3{
+    color:#22c55e;
+    margin-bottom:8px;
+}
+
+/* ===== OL LIST ===== */
+ol{margin-left:20px;}
+li{margin-bottom:8px;}
+
+/* ===== BADGE ===== */
+.badge{
+    text-align:center;
+    margin-top:15px;
+    color:#22c55e;
+    font-weight:600;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:linear-gradient(180deg,#020617,#000);
+    border-top:1px solid #1e293b;
+    padding:30px 20px;
+    text-align:center;
+    font-size:14px;
+}
+footer a{
+    color:#22c55e;
+    text-decoration:none;
+    margin:0 6px;
+}
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:999;
+    animation: pulse 2s infinite;
+}
+.whatsapp img{
+    width:65px;
+    border-radius:50%;
+    box-shadow:0 6px 20px rgba(0,0,0,0.5);
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+.whatsapp img:hover{
+    transform: scale(1.2);
+    box-shadow:0 10px 35px rgba(56,189,248,0.7);
+}
+
+/* ===== MOBILE FIX ===== */
+@media(max-width:600px){
+    .container{margin:25px auto;}
+    .card{padding:20px;}
+    .btn{width:100%;text-align:center;font-size:15px;padding:12px 0;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="nav">
+        <div class="logo">Mahadev Book</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Blogs</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <img src="https://i.postimg.cc/Gm3mVdbx/IMG-20260204-WA0000.jpg" alt="Mahadev Book King of Online Betting World">
+    <h1>Mahadev Book – King of Online Betting World</h1>
+    <p>
+        Mahadev Book is India’s trusted platform to get secure online betting IDs
+        for cricket, football, casino games and more. Smart betting starts with
+        the right platform — and that platform is Mahadev Book.
+    </p>
+    <a class="btn" href="https://wa.me/919216437766" target="_blank"><i class="fa-brands fa-whatsapp"></i> GET MAHADEV ID NOW</a>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<div class="container">
+    <div class="card">
+        <h2>About Mahadev Book</h2>
+        <img class="about-img" src="https://i.postimg.cc/kG9mSv4m/IMG-20260204-WA0001.jpg" alt="About Mahadev Book">
+        <p>
+            Mahadev Book is a reliable online betting service provider that helps
+            users get verified betting IDs for top sports and casino platforms.
+            We work through an agent-based system that ensures fast setup,
+            personal support and smooth withdrawals.
+        </p>
+        <p>
+            Most of our users prefer Mahadev Book for cricket betting, IPL matches
+            and selected international sports due to our instant support and
+            transparent process.
+        </p>
+        <a class="btn" href="https://wa.me/919216437766" target="_blank"><i class="fa-brands fa-whatsapp"></i> GET ONLINE CRICKET ID</a>
+    </div>
+
+<!-- ===== FEATURES GRID ===== -->
+<div class="grid">
+    <div class="card">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+        <h2>100% Trusted</h2>
+        <p>Used by lakhs of users across India with proven reliability.</p>
+    </div>
+    <div class="card">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+        <h2>Instant ID</h2>
+        <p>Get your betting ID within minutes via WhatsApp support.</p>
+    </div>
+    <div class="card">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2489/2489756.png">
+        <h2>Fast Withdrawal</h2>
+        <p>Quick payouts with secure and verified payment methods.</p>
+    </div>
+</div>
+</div>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<div class="whatsapp">
+    <a href="https://wa.me/919216437766" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+    </a>
+</div>
+
+<!-- ===== BETTING TABLE ===== -->
+<div class="container">
+  <div class="card">
+    <h2>Get Your Betting IDs Instantly</h2>
+    <p>Select your favorite platform and get verified ID via WhatsApp instantly.</p>
+    <div style="overflow-x:auto;">
+      <table>
+        <tr>
+          <th>Platform</th>
+          <th>Features</th>
+          <th>Get ID</th>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-bolt" style="color:#38bdf8;"></i> Laser247</td>
+          <td><i class="fa-solid fa-trophy" style="color:#22c55e;"></i> Cricket & Football, Fast Withdrawals</td>
+          <td>
+            <a class="btn" href="https://wa.me/919216437766" target="_blank"><i class="fa-brands fa-whatsapp"></i> Get ID</a>
+          </td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-dice" style="color:#facc15;"></i> Gold365</td>
+          <td><i class="fa-solid fa-lock" style="color:#22c55e;"></i> Live Casino, Secure Payments</td>
+          <td>
+            <a class="btn" href="https://wa.me/919216437766" target="_blank"><i class="fa-brands fa-whatsapp"></i> Get ID</a>
+          </td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-futbol" style="color:#38bdf8;"></i> 11xPlay</td>
+          <td><i class="fa-solid fa-headset" style="color:#22c55e;"></i> Sports Betting, Instant Support</td>
+          <td>
+            <a class="btn" href="https://wa.me/919216437766" target="_blank"><i class="fa-brands fa-whatsapp"></i> Get ID</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<div class="container">
+  <div class="card">
+    <h2>Why Choose Mahadev Book?</h2>
+    <div class="grid">
+      <div class="card center">
+        <i class="fa-solid fa-shield-halved fa-2x" style="color:#38bdf8;"></i>
+        <h2>Trusted by Millions</h2>
+        <p>Our platform is used by lakhs of satisfied bettors across India.</p>
+      </div>
+      <div class="card center">
+        <i class="fa-brands fa-whatsapp fa-2x" style="color:#22c55e;"></i>
+        <h2>Instant WhatsApp Support</h2>
+        <p>Get your IDs or solve queries instantly via our dedicated WhatsApp line.</p>
+      </div>
+      <div class="card center">
+        <i class="fa-solid fa-money-bill-transfer fa-2x" style="color:#facc15;"></i>
+        <h2>Secure & Fast Withdrawals</h2>
+        <p>We guarantee fast payouts with verified and safe payment options.</p>
+      </div>
+      <div class="card center">
+        <i class="fa-solid fa-layer-group fa-2x" style="color:#a855f7;"></i>
+        <h2>Multiple Platforms</h2>
+        <p>Choose from the best betting platforms like Laser247, Gold365, 11xPlay & more.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SPORTS & CASINO ===== -->
+<div class="container">
+    <div class="card">
+        <h2>Sports Betting</h2>
+        <p>Bet on your favorite sports with Mahadev Book – fast, safe & exciting</p>
+        <div class="grid">
+            <div class="card" style="text-align:center;">
+                <h3>🏏 Cricket</h3>
+                <p>IPL, T20, ODI & live matches with real-time odds.</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <h3>⚽ Football</h3>
+                <p>Premier League, La Liga & Champions League betting.</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <h3>🔥 Live Betting</h3>
+                <p>Bet during live matches & boost your winnings.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Casino Games</h2>
+        <p>Live casino, slots & Teen Patti with instant payouts</p>
+        <div class="grid">
+            <div class="card" style="text-align:center;">
+                <h3>🎲 Live Casino</h3>
+                <p>Real dealers & real tables – play anytime.</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <h3>🎰 Slots</h3>
+                <p>High-paying slots with daily jackpots.</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <h3>🃏 Teen Patti</h3>
+                <p>India’s favorite card game with instant results.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Deposit & Withdrawal</h2>
+        <p>Fast, secure & trusted payment process</p>
+        <ol>
+            <li>Get your betting ID instantly via WhatsApp</li>
+            <li>Add balance using UPI, Paytm, GPay or Net Banking</li>
+            <li>Play sports or casino games anytime</li>
+            <li>Withdraw winnings – processed within minutes</li>
+        </ol>
+        <div class="badge">
+            ✅ Instant Payouts &nbsp;|&nbsp; ✅ 100% Secure &nbsp;|&nbsp; ✅ 24×7 Support
+        </div>
+    </div>
+</div>
+
+<!-- ===== TESTIM
